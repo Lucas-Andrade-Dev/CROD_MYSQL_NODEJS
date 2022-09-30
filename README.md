@@ -97,3 +97,5 @@ cep varchar(45),
 bairro varchar(255), 
 complemento varchar(45),
 CONSTRAINT fk_con_usuario FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario) (A constraint é para criar uma chave estrengeira conectando as tabelas)
+
+
