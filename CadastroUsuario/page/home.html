@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"">
+    <title>Pagina Inicial</title>
+
+    <link rel=" stylesheet" href="/public/app.css">
+
+</head>
+
+<body>
+
+    <%- include('header.html') %>
+
+        <div class="container">
+            <h1>Cadastro</h1>
+            <form class="login-form" method="post">
+                <div class="login-form-group">
+                    *<input type="text" id="nome" name="nome" placeholder="Nome" required="required">
+                    <br>
+                    *<input type="text" id="sobrenome" name="sobrenome" placeholder="Sobre Nome" required="required">
+                    <br>
+                    *<input type="email" id="email" name="email" placeholder="Email" required="required">
+                    <br>
+                    *<input type="tel" id="telefone" name="telefone" placeholder="Telefone ( ) 00000-0000"
+                        required="required">
+                    <br>
+                    *<input type="text" id="cpf" name="cpf" placeholder="CPF" required="required">
+                    <span id="resposta"></span>
+                    <br>
+                </div>
+                <h1>Endereço</h1>
+                <div class="login-form-group">
+                    *<input type="text" id="logradouro" name="logradouro" placeholder="Logadrouro" required="required">
+                    <br>
+                    *<input type="text" id="numero" name="numero" placeholder="Numero" required="required">
+                    <br>
+                    *<input type="text" id="cidade" name="cidade" placeholder="Cidade" required="required">
+                    <br>
+                    *<input type="text" id="uf" name="uf" placeholder="UF" required="required">
+                    <br>
+                    *<input type="text" id="cep" name="cep" placeholder="Cep" required="required">
+                    <br>
+                    *<input type="text" id="bairro" name="bairro" placeholder="Bairro" required="required">
+                    <br>
+                    <input type="text" id="complemento" name="complemento" placeholder="Complemento">
+                    <br>
+                </div>
+
+                <button class="button" id="botao" type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+
+</body>
+
+</html>

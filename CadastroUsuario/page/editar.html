@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"">
+    <title>Pagina Inicial</title>
+
+    <link rel=" stylesheet" href="/public/app.css">
+
+</head>
+
+<body>
+
+    <%- include('header.html') %>
+
+        <div class="container">
+            <h1>Alterar</h1>
+            <form class="login-form" method="post" action="/editar">
+
+                <div class="login-form-group">
+                    <% for(let i=0; i < db.length; i++) {%>
+                        <input style="display: none;" type="text" id="id" name="id" value="<%= db[i].id_usuario %>">
+                        <br>
+                        <input type="text" id="nome" name="nome" value="<%= db[i].nome%>" required="required">
+                        <br>
+                        <input type="text" id="sobrenome" name="sobrenome" value="<%= db[i].sobrenome%>"
+                            required="required">
+                        <br>
+                        <input type="email" id="email" name="email" value="<%= db[i].email%>" required="required">
+                        <br>
+                        <input type="tel" id="telefone" name="telefone" value="<%= db[i].telefone%>"
+                            required="required">
+                        <br>
+                        <input type="text" id="cpf" name="cpf" value="<%= db[i].cpf%>" required="required">
+                        <br>
+                        <%}%>
+                </div>
+
+                <h1>Endereço</h1>
+
+                <div class="login-form-group">
+
+
+                    <% for(let i=0; i < dbs.length; i++) {%>
+                        <input type="text" id="logradouro" name="logradouro" value="<%= dbs[i].logradouro%>"
+                            required="required">
+                        <br>
+                        <input type="text" id="numero" name="numero" value=" <%= dbs[i].numero%>" required="required">
+                        <br>
+                        <input type="text" id="cidade" name="cidade" value="<%= dbs[i].cidade%>" required="required">
+                        <br>
+                        <input type="text" id="uf" name="uf" value="<%= dbs[i].uf%>" required="required">
+                        <br>
+                        <input type="text" id="cep" name="cep" value="<%= dbs[i].cep%>" required="required">
+                        <br>
+                        <input type="text" id="bairro" name="bairro" value=" <%= dbs[i].bairro%>" required="required">
+                        <br>
+                        <input type="text" id="complemento" name="complemento" value=" <%= dbs[i].complemento%>">
+                        <br>
+                        <%}%>
+                </div>
+
+
+                <button class=" button" id="botao" type="submit">Editar</button>
+            </form>
+
+        </div>
+
+
+</body>
+
+</html>

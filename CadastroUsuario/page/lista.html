@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Usuarios</title>
+    <link rel=" stylesheet" href="/public/app.css">
+    <link rel="stylesheet" href="/public/bootstrap.css">
+</head>
+
+<body>
+
+    <%- include('header.html') %>
+
+        <section class="lista">
+
+            <div class="center">
+
+                <div class="Usuario">
+
+                    <table class="table tabela">
+
+                        <tr class="table-dark table-hover">
+                            <td>ID</td>
+                            <td>Nome</td>
+                            <td>Sobre Nome</td>
+                            <td>Email</td>
+                            <td>Telefone</td>
+                            <td>CPF</td>
+                        </tr>
+                        <% for(let i=0; i < dados.length; i++) {%>
+                            <tr class="dados">
+                                <td>
+                                    <%= dados[i].id_usuario %>
+                                </td>
+                                <td>
+                                    <%= dados[i].nome%>
+                                </td>
+                                <td>
+                                    <%= dados[i].sobrenome%>
+                                </td>
+                                <td>
+                                    <%= dados[i].email%>
+                                </td>
+                                <td>
+                                    <%= dados[i].telefone%>
+                                </td>
+                                <td>
+                                    <%= dados[i].cpf%>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+</body>
+
+</html>

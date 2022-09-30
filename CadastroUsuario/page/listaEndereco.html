@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Endereços</title>
+    <link rel=" stylesheet" href="/public/app.css">
+    <link rel="stylesheet" href="/public/bootstrap.css">
+
+</head>
+
+<body>
+
+    <%- include('header.html') %>
+
+        <section class="lista">
+
+            <div class="center">
+
+                <div class="Usuario">
+
+                    <table class="table tabela">
+
+                        <tr class="table-dark table-hover">
+                            <td>ID</td>
+                            <td>ID Usuario</td>
+                            <td>Logradouro</td>
+                            <td>Numero</td>
+                            <td>Cidade</td>
+                            <td>UF</td>
+                            <td>CEP</td>
+                            <td>Bairro</td>
+                            <td>Complemento</td>
+                        </tr>
+                        <% for(let i=0; i < dados.length; i++) {%>
+                            <tr class="dados">
+                                <td>
+                                    <%= dados[i].id_endereco_usuario %>
+                                </td>
+                                <td>
+                                    <%= dados[i].id_usuario %>
+                                </td>
+                                <td>
+                                    <%= dados[i].logradouro%>
+                                </td>
+                                <td>
+                                    <%= dados[i].numero%>
+                                </td>
+                                <td>
+                                    <%= dados[i].cidade%>
+                                </td>
+                                <td>
+                                    <%= dados[i].uf%>
+                                </td>
+                                <td>
+                                    <%= dados[i].cep%>
+                                </td>
+                                <td>
+                                    <%= dados[i].bairro%>
+                                </td>
+                                <td>
+                                    <%= dados[i].complemento%>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <link rel=" stylesheet" href="/public/app.css">
+    <link rel="stylesheet" href="/public/bootstrap.css">
+</head>
+
+<body>
+
+    <%- include('header.html') %>
+
+        <section class="buscar">
+
+            <div class="center">
+
+                <div class="Usuario">
+
+                    <table class="table tabela">
+
+                        <tr class="table-dark table-hover">
+                            <td>ID</td>
+                            <td>Nome</td>
+                            <td>Sobre Nome</td>
+                            <td>Email</td>
+                            <td>Telefone</td>
+                            <td>CPF</td>
+                        </tr>
+                        <% for(let i=0; i < db.length; i++) {%>
+                            <tr class="dados">
+                                <td>
+                                    <%= db[i].id_usuario %>
+                                </td>
+                                <td>
+                                    <%= db[i].nome%>
+                                </td>
+                                <td>
+                                    <%= db[i].sobrenome%>
+                                </td>
+                                <td>
+                                    <%= db[i].email%>
+                                </td>
+                                <td>
+                                    <%= db[i].telefone%>
+                                </td>
+                                <td>
+                                    <%= db[i].cpf%>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="buscar">
+
+            <div class="center">
+
+                <div class="Usuario">
+
+                    <table class="table tabela">
+
+                        <tr class="table-dark table-hover">
+                            <td>ID</td>
+                            <td>ID Usuario</td>
+                            <td>Logradouro</td>
+                            <td>Numero</td>
+                            <td>Cidade</td>
+                            <td>UF</td>
+                            <td>CEP</td>
+                            <td>Bairro</td>
+                            <td>Complemento</td>
+                        </tr>
+                        <% for(let i=0; i < dbs.length; i++) {%>
+                            <tr class="dados">
+                                <td>
+                                    <%= dbs[i].id_endereco_usuario %>
+                                </td>
+                                <td>
+                                    <%= dbs[i].id_usuario %>
+                                </td>
+                                <td>
+                                    <%= dbs[i].logradouro%>
+                                </td>
+                                <td>
+                                    <%= dbs[i].numero%>
+                                </td>
+                                <td>
+                                    <%= dbs[i].cidade%>
+                                </td>
+                                <td>
+                                    <%= dbs[i].uf%>
+                                </td>
+                                <td>
+                                    <%= dbs[i].cep%>
+                                </td>
+                                <td>
+                                    <%= dbs[i].bairro%>
+                                </td>
+                                <td>
+                                    <%= dbs[i].complemento%>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <% for(let i=0; i < dbs.length; i++) {%>
+            <div class="controler">
+                <button><a href="/deletar/<%= dbs[i].id_usuario %> ">Excluir Usuario</a></button>
+                <button><a href="/editar/<%= dbs[i].id_usuario %>">Editar Usuario</a></button>
+            </div>
+            <%}%>
+</body>
+
+</html>
