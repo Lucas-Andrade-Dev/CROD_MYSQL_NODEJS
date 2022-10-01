@@ -28,7 +28,7 @@
 
 ![cadastro9](https://user-images.githubusercontent.com/112965050/193369177-309c4466-8d4e-48a7-b1fd-af7aa138c937.png)
 
-### Buscando novamento pelo id
+### Buscando novamente pelo id
 
 ![cadastro10](https://user-images.githubusercontent.com/112965050/193369178-00abc236-9604-460d-8df5-4d5e82e3df7c.png)
 
