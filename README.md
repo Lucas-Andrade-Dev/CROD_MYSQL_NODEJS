@@ -77,7 +77,7 @@ ultimos drivers necessarios para rodar aplicação
 
 para rodar no banco de dados (usando wamp server) mysql eu criei uma database chamada 'cadastrousuario' e criei duas
 tabelas 'usuarios' e 'endereços_usuario'.
-na tabela usuarios contem os seguintes dados:
+Na tabela usuarios contem os seguintes dados:
 
 id_usuario int primary key auto_increment, 
 nome varchar(255), 
@@ -87,6 +87,7 @@ telefone varchar(45),
 cpf varchar(45), 
 
 tabela endereços_usuario:
+
 id_endereco_usuario int primary key auto_increment,
 id_usuario int, 
 logradouro varchar(255), 
